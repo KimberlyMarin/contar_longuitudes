@@ -5,27 +5,27 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        /*Invocar scanner para lectura de de los parametros de entrada*/
-        Scanner leer =  new Scanner(System.in);
-        int notas;
 
-        System.out.print("ingrese cantidad de notas:");
-        /*se setea los valores de los campos */
-        notas = leer.nextInt();
+        Scanner entrada = new Scanner(System.in);
+        String nombre;
 
-        int suma = 0;
-        int prom = 0;
-        int nota = 0;
-        /*se recorre las notas dependiendo de la cantidad de notas que se asignen*/
-        for(int i=1; i<= notas; i++){
-            System.out.println("ingrese nota"+" "+i+" "+"de"+" "+notas+":");
-            nota = leer.nextInt();
-            /*se suman las notas luego de definir la cantidad de notas*/
-            suma = suma + nota;
+        System.out.print("Ingrese palabra: ");
+
+        nombre = entrada.nextLine();
+        String sPalabra = nombre;
+
+        int contador = 0;
+
+        long totalCharacters = sPalabra.chars().filter(ch -> ch != ' ').count();
+
+        for(int x=0;x<sPalabra.length();x++) {
+            if ((sPalabra.charAt(x)=='a') || (sPalabra.charAt(x)=='e') || (sPalabra.charAt(x)=='i') || (sPalabra.charAt(x)=='o') || (sPalabra.charAt(x)=='u')){
+                contador++;
+            }
         }
-        /*se realiza el promedio de con base a la cantidad de notas vs cada nota*/
+        System.out.println("La palabra " + sPalabra + " contiene " + contador + " vocales");
+        System.out.println("la longuitud de la palabra es: " + totalCharacters );
 
-        prom = suma / notas;
-        System.out.println("promedio de las notas:"+prom );
     }
+
 }
