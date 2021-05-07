@@ -13,7 +13,7 @@ public class Main {
         System.out.print("Ingrese palabra: ");
 
         nombre = entrada.nextLine();
-        /*Asignacion de dato digitado una variable */
+        /*Asignacion de un dato digitando una variable */
         String sPalabra = nombre;
 
         /*se crea contador para saber la cantidad de vocales*/
@@ -26,7 +26,7 @@ public class Main {
                 contador++;
             }
         }
-        /*Se imprime la cantidad vocales y la longuitud de la palabra*/
+        /*Se imprime la cantidad de vocales y la longuitud de la palabra*/
         System.out.println("La palabra " + sPalabra + " contiene " + contador + " vocales");
         System.out.println("la longuitud de la palabra es: " + totalCharacters );
 
